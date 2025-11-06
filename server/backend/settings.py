@@ -7,11 +7,11 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-5gf9c7*w5q(vmn)1p5oak@!p9lpu&b80-7at+pv9=v%coi*)xu'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
-DEBUG = True
+DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
