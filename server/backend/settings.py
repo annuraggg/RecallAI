@@ -96,12 +96,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173', "https://recallai.anuragsawant.in", "https://recallai-serve.anuragsawant.in",]
-
-CSRF_COOKIE_SAMESITE = 'None'
-SESSION_COOKIE_SAMESITE = 'None'
-CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_DOMAIN = ".anuragsawant.in"  # note the leading dot
+SESSION_COOKIE_SAMESITE = "None"
 SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_DOMAIN = ".anuragsawant.in"
+CSRF_COOKIE_SAMESITE = "None"
+CSRF_COOKIE_SECURE = True
+
+CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173', "https://recallai.anuragsawant.in", "https://recallai-serve.anuragsawant.in",]
 
 
 REST_FRAMEWORK = {
