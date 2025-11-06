@@ -1,0 +1,36 @@
+# === Python / Django ===
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+.env
+.env.*
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# IDE / OS junk
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# === React / Node ===
+client/node_modules/
+client/build/
+client/.env
+
+# === Other ===
+*.bak
+*.swp
+*.tmp
+*.log
+*.orig
+*.coverage
